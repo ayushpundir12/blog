@@ -1,16 +1,11 @@
-{%extends 'base.html' %}
-
-
+{% extends 'base.html' %}
 
 {% block content %}
 
-
-<!-- Featured Posts -->
-
-<h3 class="text-uppercase text-warning" style="font-weight:700;">Category-{{category}}</h3>
+<h3 class="text-uppercase text-warning" style="font-weight:700;">Results-{{ keyword }}</h3>
 <div class="row mb-2">
-    {%if posts %}
-    {% for blog in posts %}
+    {%if blogs %}
+    {% for blog in blogs %}
 
     <div class="col-md-6">
         <div class="card border-0">
@@ -27,6 +22,8 @@
     <h4>No posts available in this category.</h4>
     {% endif %}
 </div>
+
+
 
 
 
