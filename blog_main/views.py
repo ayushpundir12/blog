@@ -66,7 +66,7 @@ def user_login(request):
             if user is not None:
                 login(request, user)
                 messages.success(request, f'Welcome back, {username}!')
-                return redirect('home')  # Redirect to home page after successful login
+                return redirect('dashboard')  # Redirect to home page after successful login
             else:
                 messages.error(request, 'Invalid username or password.')
         else:
@@ -80,4 +80,4 @@ def user_login(request):
 def user_logout(request):
     auth.logout(request)
     messages.info(request, "You have successfully logged out.")
-    return redirect('home')
+    return redirect('dashboard')
