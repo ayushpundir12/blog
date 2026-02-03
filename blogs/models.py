@@ -1,6 +1,7 @@
 from pyexpat import model
 from unicodedata import category
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Category(models.Model):
@@ -24,7 +25,7 @@ class blog(models.Model):
     title=models.CharField(max_length=200)
     slug=models.SlugField(max_length=200, unique=True)
     category=models.ForeignKey(Category, on_delete=models.CASCADE)
-    author=models.CharField(max_length=100)
+    author=models.ForeignKey(User, on_delete=models.CASCADE)
     featured_image=models.ImageField(upload_to='uploads/%Y/%m/%d/')
     short_description=models.TextField(max_length=500)
     blog_body=models.TextField(max_length=5000)
