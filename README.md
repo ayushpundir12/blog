@@ -90,7 +90,8 @@ This project is deployed on **PythonAnywhere**. To deploy your own instance:
 
 ## 📸 Screenshots
 
-> _Add screenshots of your homepage, blog post page, and login screen here._
+<img width="1828" height="979" alt="image" src="https://github.com/user-attachments/assets/cf23ef46-44d4-4146-ab39-c030158fe6b3" />
+
 
 ---
 
